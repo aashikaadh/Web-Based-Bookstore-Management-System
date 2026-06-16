@@ -1,0 +1,269 @@
+
+/* Navbar container */
+.navbar {
+  background-color: blueviolet  !important;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+   
+}
+
+/* Remove default list styling */
+.navbar ul {
+    list-style: none;
+    display: flex;             /* horizontal menu */
+    justify-content: flex-start; /* align left, can use center */
+    gap: 5px;                 /* space between items */
+    margin: 10px;
+    padding: 0; 
+     /* logo left, links middle, right side */
+    align-items: center;
+    
+
+}
+
+/* Navbar links */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight:bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+    
+}
+/* Hover effect */
+.navbar ul li a:hover {
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+/* Active link */
+.navbar ul li a.active {
+    color: #fff;
+}
+.logo-cont{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    align-items: center;
+     margin-right: 100px;
+}
+
+.logo-cont img{
+    width: 40%;
+}
+
+.book_logo{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+   
+}
+
+
+.header_acc_box{
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    width: 220px;
+    display: none;
+    z-index: 999;
+}
+
+.header_acc_box.active{
+    display: block;
+}
+
+.header_acc_box p{
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.delete-btn{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 6px;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* Right side content */
+.last_part{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  position: relative; /* for dropdown */
+  margin-left: 100px;  /* PUSH TO RIGHT */
+}
+
+/* Login text */
+.loginorreg p{
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Icons row */
+.icons{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icons i,
+.icons a,
+.icons div{
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+.footer p {
+  margin-top: 2px;
+  font-size: 16px;
+  font-weight: bold;
+
+  
+}
+
+/* Footer Base */
+.footer {
+    background: #4b474cff;
+    color: #fdf7fcff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top:2px;
+    width: 100%;
+    height: 120px;
+    /* border-radius: 12px; */
+    
+}
+
+
+
+/* Icon Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Icon Style */
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Individual Icon Colors */
+.social-icons .facebook { background: #3b5998; }
+.social-icons .instagram { background: #e4405f; }
+.social-icons .twitter { background: #1da1f2; }
+.social-icons .youtube { background: #ff0000; }
+
+/* Hover Effects */
+.social-icons a:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Footer Text */
+.footer p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.footer p:hover {
+    color: #f64f07ff; /* change text color on hover */
+    transform: scale(1.05); /* slightly enlarge */
+    cursor: pointer; /* show pointer on hover */
+}
+.discover-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #ff5722; /* button color */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(166, 160, 160, 0.2);
+}
+
+.discover-btn:hover {
+    background: #e64a19; /* darker shade on hover */
+    transform: translateY(-3px); /* lift effect */
+    box-shadow: 0 6px 15px rgba(184, 178, 178, 0.3);
+}
+.about_cont,
+.questions_cont{
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+
+  padding: 2rem;
+  background-color: #669bbc;
+    /* border-radius: 12px; */
+}
+.about_cont img{
+  width: 40%;
+  border-radius: 10px;
+}
+.about_descript,
+.questions{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.about_descript h2,
+.questions h2{
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.about_descript p,
+.questions p{
+  font-size: 1rem;
+}
+
+.questions_cont{
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 2rem;
+  
+}
+.questions{
+  width: 60%;
+  color: black;
+
+}
+
+
+    

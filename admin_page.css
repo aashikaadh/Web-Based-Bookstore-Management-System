@@ -1,0 +1,737 @@
+
+
+ body {
+            font-family: "Poppins", sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: blueviolet;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navbar .nav-right button {
+            padding: 8px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            background-color: #ff4b5c;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-right button:hover {
+            background-color: #ff1f3a;
+        }
+
+        /* Welcome Box */
+        .welcome-box {
+            background-color: white;
+            padding: 30px 40px;
+            margin: 20px auto;
+            border-radius: 12px;
+            max-width: 1200px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .welcome-box h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .welcome-box p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Books Table */
+        /* .books-table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+
+        .books-table th, .books-table td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .books-table th {
+            background-color:blueviolet;
+            color: white;
+        }
+
+        .books-table img {
+            width: 80px;
+            height: 100px;
+        }
+
+        .books-table a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #00b894;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+     
+        } 
+
+         .books-table a:hover {
+            background-color: #019875;
+        }
+
+        .books-table .delete-btn {
+            background-color: #d63031;
+        }
+
+        .books-table .delete-btn:hover {
+            background-color: #b71c1c;
+        }
+        
+ */
+
+ /* Books Table */
+.books-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f8f9fa;
+}
+
+.books-table th,
+.books-table td {
+    border: 1px solid #aaa;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle; /* 🔑 MAIN FIX */
+}
+
+/* Table Header */
+.books-table th {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+/* Book Image */
+.books-table img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Action column */
+.books-table td.action-btns {
+    white-space: nowrap; /* 🔑 buttons same line */
+}
+
+/* Buttons */
+.books-table td.action-btns a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #00b894;
+    padding: 6px 14px;
+    border-radius: 5px;
+    margin: 0 4px;
+    display: inline-block;
+    font-size: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Hover */
+.books-table td.action-btns a:hover {
+    opacity: 0.85;
+}
+
+/* Delete Button */
+.books-table td.action-btns .delete-btn {
+    background-color: #d63031;
+}
+
+.books-table td.action-btns .delete-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+    /* Admin Page */
+.admin_header{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: blueviolet; 
+    box-shadow: 2px 2px 10px rgb(165, 165, 165);
+    box-sizing: border-box;
+}
+
+.header_navigation{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.header_logo{
+    font-size: 1.5rem;
+    color: #000;
+    font-weight:bold;
+}
+
+.header_navigation a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.header_logo span{
+    color: #faf7f7ff;
+    font-weight:bold;
+}
+
+.header_navigation .header_navbar{
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    color: #000;
+    transform: translate(1rem);
+    transition: .2s;
+}
+
+.header_navigation .header_navbar a{
+    background-color: white;
+    box-shadow: 2px 2px 8px rgb(165, 165, 165);
+    padding: 0.2rem 1rem;
+    margin: 0 1rem;
+    color: #000;
+    border-radius: 10px;
+}
+
+.header_navigation .header_navbar a:hover{
+    color: white;
+    background-color: #C1121F;
+    box-shadow: 2px 2px 11px rgb(165, 165, 165);
+}
+
+.header_navigation .header_icons div{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.header_navigation .header_icons div:hover{
+    color: #C1121F;
+}
+
+.header_acc_box{
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: .5rem;
+    /* height: 100px */
+    /* width: 20rem; */
+    padding: 1rem;
+    /* text-align: center; */
+    display: none;
+    animation: fadeIn .2s linear;
+    color: #000;
+}
+
+@keyframes fadeIn {
+0%{
+    transform: translate(1rem);
+    opacity: 0.2;
+}
+}
+
+#menu_btn{
+    display: none;
+}
+
+.header_acc_box p{
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.header_acc_box p span{
+    color: #C1121F;
+}
+
+.header_acc_box .delete-btn{
+    background-color: #C1121F;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    text-decoration: none;
+
+}
+.header_acc_box .delete-btn:hover{
+    background-color: #000;
+    color: white;
+}
+
+.header_acc_box.active{
+    display: block;
+    background-color: white;
+    z-index: 1000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.admin_dashboard{
+    padding: 1rem;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.admin_dashboard .admin_heading{
+    color: #C1121F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.admin_box_container .admin_box{
+    margin: 1rem;
+    background-color: white;
+    width: 20%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px gray;
+    cursor: pointer;
+}
+
+.admin_box_container .admin_box:hover{
+    box-shadow: 2px 2px 12px rgb(65, 65, 65);
+}
+
+.admin_box_container .admin_box h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.admin_box_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.admin_add_products{
+    margin-top: 15%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.admin_add_products form{
+    background-color: white;
+    width: 35%;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_add_products form h3{
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+.admin_input{
+    margin: 1.2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.admin_input:focus{
+    outline: none;
+    box-shadow: 2px 2px 10px rgb(107, 107, 107);
+}
+.admin_add_products form input[type="submit"]{
+    background-color: #C1121F;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.show_products{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.show_products .product_box_cont{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.show_products .product_box_cont .product_box{
+    background-color: white;
+    padding: 1.5rem;
+    width: 25%;
+    height: 450px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 15px gray;
+}
+
+.show_products .product_box_cont .product_box img{
+    height: 60%;
+    border-radius: 20px;
+}
+
+.show_products .product_box_cont .product_box .product_name{
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.show_products .product_box_cont .product_box .product_price{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+
+.edit_product_form{
+    background-color: rgb(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    z-index: 1200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+      
+.edit_product_form form{
+    width: 40rem;
+    height: 80%;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: white;
+}
+
+.edit_product_form form img{
+    height: 13rem;
+}
+
+.edit_product_form form .update_box{
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.admin_orders{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.admin_orders h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.admin_orders .admin_box_container .admin_box form input,
+.admin_orders .admin_box_container .admin_box form select,
+.admin_orders .admin_box_container .admin_box form a{
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.delete-btn{
+    background-color: #C1121F;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: bold; 
+}
+
+.option-btn{
+    background-color: greenyellow;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.admin_box_container .admin_box p{
+    font-weight: 900;
+       
+    
+}
+
+ .admin_box_container .admin_box span{
+    color: #C1121F;
+       display: inline;
+       
+     
+   
+           
+}
+
+.admin_orders .admin_box_container .admin_box,
+.admin_messages .admin_box_container .admin_box{
+    width: 40%;
+}
+
+.admin_orders .admin_box_container,
+.admin_messages .admin_box_container{
+    align-items: center;
+    justify-content: center;
+ }
+
+ .admin_users,
+ .admin_messages{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .admin_users a,
+ .admin_messages a{
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+ }
+
+.empty{
+    font-size: 1.5rem;
+    color: gray;
+    margin-top: 2rem;
+    color:red;
+}
+
+
+
+
+
+
+        .discover-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #ff5722; /* button color */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(166, 160, 160, 0.2);
+}
+
+.discover-btn:hover {
+    background: #e64a19; /* darker shade on hover */
+    transform: translateY(-3px); /* lift effect */
+    box-shadow: 0 6px 15px rgba(184, 178, 178, 0.3);
+}
+    
+
+.footer p {
+  margin-top: 2px;
+  font-size: 16px;
+  font-weight: bold;
+
+  
+}
+
+/* Footer Base */
+.footer {
+    background: #4b474cff;
+    color: #fdf7fcff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top:50px;
+    width: 100%;
+    height: 120px;
+    /* border-radius: 12px; */
+    
+}
+
+
+
+/* Icon Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Icon Style */
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Individual Icon Colors */
+.social-icons .facebook { background: #3b5998; }
+.social-icons .instagram { background: #e4405f; }
+.social-icons .twitter { background: #1da1f2; }
+.social-icons .youtube { background: #ff0000; }
+
+/* Hover Effects */
+.social-icons a:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Footer Text */
+.footer p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.footer p:hover {
+    color: #f34915ff; /* change text color on hover */
+    transform: scale(1.05); /* slightly enlarge */
+    cursor: pointer; /* show pointer on hover */
+}
+
+
+/* ===== ADD BOOK FORM PAGE ===== */
+.add-book-container {
+  width: 100%;
+  max-width: 550px;
+  background: #e4d3f3;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+   display: flex;
+  flex-direction: column; /* vertical layout */
+  margin-top: 20px;
+    align-items: center;      /* vertical center */
+    min-height: calc(100vh - 70px); /* full viewport minus navbar height */
+ 
+
+}
+
+.add-book-container h2 {
+  text-align: center;
+  color: #4c5ce0;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.add-book-container input,
+.add-book-container textarea {
+  width: 100%;
+  padding: 12px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.add-book-container input:focus,
+.add-book-container textarea:focus {
+  background: #eef2ff;
+  box-shadow: 0 0 0 2px #7494ec;
+}
+
+.add-book-container textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.add-book-container button {
+  width: 100%;
+  padding: 12px;
+  background: #7494ec;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.add-book-container button:hover {
+  background: lightskyblue;
+}
+
+.add-book-container .back-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.add-book-container .back-link a {
+  color: #7494ec;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.add-book-container .back-link a:hover {
+  text-decoration: underline;
+  color: #b71c1c;
+    box-shadow: 2px 2px 15px gray;
+  
+}
